@@ -1,0 +1,8 @@
+import { createExpressServer, on } from 'freestuff';
+
+on('fsb:event:ping', event => {
+  console.log(ping);
+});
+
+createExpressServer({ publicKey: 'MCowBQYDK2VwAyEAxCGi0wmw9hnjLT7rFi/4dqnqOW+vcMYrNzGXdwLnlc4=' })
+  .then(({ port }) => console.log(`Server is running on port ${port}`));
